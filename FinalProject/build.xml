@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="FinalProject" default="default" basedir=".">
+    <description>Builds, tests, and runs the project FinalProject.</description>
+    <import file="nbproject/build-impl.xml" optional="true"/>
+
+    <target name="default" depends="compile,run"/>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes" includeantruntime="false" source="11" target="11" encoding="UTF-8"/>
+    </target>
+
+    <target name="run" depends="compile">
+        <java classname="com.mycompany.finalproject.MainMenu" fork="true">
+            <classpath>
+                <pathelement location="build/classes"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="clean">
+        <delete dir="build"/>
+        <delete dir="dist"/>
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="dist"/>
+        <jar destfile="dist/FinalProject.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="com.mycompany.finalproject.MainMenu"/>
+            </manifest>
+        </jar>
+    </target>
+</project>

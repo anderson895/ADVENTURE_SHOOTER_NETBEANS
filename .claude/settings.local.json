@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"C:/Users/Desktop/Downloads/projects/Junie_Game/shooting/FinalProject/src/com/mycompany/finalproject\")",
+      "Bash(mkdir -p \"C:/Users/Desktop/Downloads/projects/Junie_Game/shooting/FinalProject/nbproject\")",
+      "Bash(javac -version)",
+      "Bash(mkdir -p build/classes)",
+      "Bash(javac -d build/classes -encoding UTF-8 src/com/mycompany/finalproject/*.java)",
+      "Bash(rm -rf build/classes)",
+      "Bash(dir D:\\\\Downloads\\\\ADVENTURE_SHOOTER_NETBEANS-main\\\\FinalProject *)",
+      "Bash(javac --version)",
+      "Bash(timeout 4 java -Djava.awt.headless=false -cp build/classes com.mycompany.finalproject.MainMenu)",
+      "Bash(echo \"exit=$?\")"
+    ]
+  }
+}
